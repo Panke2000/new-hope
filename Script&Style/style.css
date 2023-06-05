@@ -7,7 +7,8 @@
     --color-black: #000000;
     --color-dark: #13131a;
     --color-lighter-dark: #1f1f30;
-    --color-red: #ff0000;
+    --color-red2: #ed2939;
+    --color-red: #dc143c;
     --color-blue: #0000ff;
     --color-purple: #4400ff;
 
@@ -17,7 +18,10 @@
     --width-tablet: 600px;
     --width-mobile: 360px;
 
+    --current-width: var(--width-mobile);
+
     --header-height: 60px;
+    --header-height-hamburger: calc(var(--header-height) + 320px);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -40,7 +44,7 @@ header{
     width: 100%;
     min-height: var(--header-height);
     background-color: var(--color-light);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 #header-cont {
@@ -78,6 +82,7 @@ header{
 
 #header-mobile-menu button{
     display: inherit;
+    cursor: pointer;;
     align-items: center;
     height: calc(var(--header-height) - 20px);
     padding: 10px;
@@ -88,8 +93,13 @@ header{
     font-size: large;
 }
 
+#header-mobile-menu button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
 #header-mobile-hamburger{
-    display: none;
+    display: inherit;
     flex-flow: column wrap;
     align-items: center;
     width: var(--width-mobile);
@@ -97,7 +107,7 @@ header{
 
 }
 #header-mobile-hamburger a {
-    display: inherit;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 310px;
@@ -116,12 +126,16 @@ header{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    width: var(--width-mobile);
     margin-top: var(--header-height);
 }
 
 body {
-    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-lighter-dark);
     margin-bottom: 50px;
+
 }
 
 .body-cont {
@@ -132,14 +146,15 @@ body {
     padding: 25px;
     min-width: 355px;
     min-height: 355px;
-    max-width: 355px;
-    max-height: 355px;
+    max-width: 550px;
+    max-height: 550px;
     margin-top: 20px;
-    background-color: inherit;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-light);
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 #index-landing {
+    justify-content: space-evenly;
     box-shadow: inset 0px 0px 25px 15px rgba(255, 0, 255, 0.5);
     background-color: var(--color-dark);
     color: var(--color-light);
@@ -147,4 +162,21 @@ body {
 
 #index-landing h3 {
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hide {
+    display: none;
 }
