@@ -26,7 +26,7 @@ let button = document.querySelector('#header-mobile-menu button');
 button.addEventListener('click', (e) => {
     if (button.innerHTML === 'MENI') {
 
-        document.querySelectorAll('#hamburger-link').forEach(el => {
+        document.querySelectorAll('.hamburger-link').forEach(el => {
             el.style.display = 'inherit';
         });
 
@@ -40,7 +40,7 @@ button.addEventListener('click', (e) => {
 
     } else if (button.innerHTML === 'SAKRIJ') {
 
-        document.querySelectorAll('#hamburger-link').forEach(el => {
+        document.querySelectorAll('.hamburger-link').forEach(el => {
             el.style.display = 'none';
         });
 

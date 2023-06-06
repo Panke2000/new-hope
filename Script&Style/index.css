@@ -11,3 +11,10 @@
     text-align: center;
 }
 
+#index-cont-row-1 {
+    flex-direction: column;
+}
+
+[id^='index-cont-'] {
+    display: inherit;
+}
