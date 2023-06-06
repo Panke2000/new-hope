@@ -212,7 +212,11 @@ footer {
 
 
 
-/* INDEPENDENT CLASS */
+/* INDEPENDENT CLASSES */
 .hide {
     display: none;
+}
+
+.flex {
+    display: flex;
 }
