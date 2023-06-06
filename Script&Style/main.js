@@ -20,8 +20,8 @@ button.addEventListener('click', (e) => {
         menu.classList.remove('hide');
 
         button.innerHTML = 'SAKRIJ';
-        button.style.backgroundColor = 'var(--color-dark)';
-        button.style.color = 'var(--color-light)';
+        button.style.backgroundColor = 'var(--color-dark-skin)';
+        button.style.color = 'var(--color-light-skin)';
         header.style.minHeight = 'var(--header-height-hamburger)';
 
     } else if (button.innerHTML === 'SAKRIJ') {
@@ -33,8 +33,8 @@ button.addEventListener('click', (e) => {
         menu.classList.add('hide');
 
         button.innerHTML = 'MENI';
-        button.style.backgroundColor = 'var(--color-light)';
-        button.style.color = 'var(--color-dark)';
+        button.style.backgroundColor = 'var(--color-light-skin)';
+        button.style.color = 'var(--color-dark-skin)';
         header.style.minHeight = 'var(--header-height)';
     }
 });

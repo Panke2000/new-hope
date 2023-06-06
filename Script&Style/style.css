@@ -3,9 +3,11 @@
     /* COLORS */
     --color-white: #ffffff;
     --color-light: #ebebf0;
+    --color-light-skin: #fbd4c5;
     --color-grey: #888888;
     --color-black: #000000;
     --color-dark: #13131a;
+    --color-dark-skin: #3c291a;
     --color-lighter-dark: #1f1f30;
     --color-red2: #ed2939;
     --color-red: #dc143c;
@@ -22,6 +24,8 @@
 
     --header-height: 60px;
     --header-height-hamburger: calc(var(--header-height) + 320px);
+
+    --footer-height: 500px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -31,6 +35,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background-color: #000000;
 }
 
 /* HEADER */
@@ -43,7 +51,9 @@ header{
     justify-content: center;
     width: 100%;
     min-height: var(--header-height);
-    background-color: var(--color-light);
+    background-color: #000000;
+    background-image: url('../Resources/Background-filler/header&footer-filler.png');
+    background-repeat: repeat;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -86,16 +96,18 @@ header{
     align-items: center;
     height: calc(var(--header-height) - 20px);
     padding: 10px;
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--color-dark-skin);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
     background-color: inherit;
-    color: var(--color-dark);
+    background-image: url('../Resources/Background-filler/cont-filler.png');
+    background-repeat: repeat;
+    color: var(--color-dark-skin);
     font-size: large;
 }
 
 #header-mobile-menu button:hover {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: var(--color-dark-skin);
+    color: var(--color-light-skin);
 }
 
 #header-mobile-hamburger{
@@ -113,11 +125,49 @@ header{
     width: 310px;
     height: calc(var(--header-height) - 20px);
     margin-top: 10px;
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--color-dark-skin);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-light-skin);
+    background-image: url('../Resources/Background-filler/cont-filler.png');
+    background-repeat: repeat;
+    color: var(--color-dark-skin);
     text-decoration: none;
+}
+
+#header-mobile-hamburger a:hover {
+    background-color: var(--color-dark-skin);
+    color: var(--color-light-skin);
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--color-light-skin);
+    background-color: #000000;
+
+}
+
+#full-body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /*background: linear-gradient(180deg, var(--color-light-skin), var(--color-dark-skin));*/
+    background-image: url('../Resources/Background-filler/body-filler.png');
+    background-repeat: repeat;
+}
+
+footer {
+    display: inherit;
+    justify-content: center;
+    z-index: 88;
+    min-height: var(--footer-height);
+    width: 100%;
+    background-color: var(--color-light-skin);
+    background-color: #000000;
+    background-image: url('../Resources/Background-filler/header&footer-filler.png');
+    background-repeat: repeat;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* index.html */
@@ -128,14 +178,7 @@ header{
     align-items: center;
     width: var(--width-mobile);
     margin-top: var(--header-height);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    background-color: var(--color-lighter-dark);
-    margin-bottom: 50px;
-
+    padding-bottom: var(--header-height);
 }
 
 .body-cont {
@@ -149,15 +192,18 @@ body {
     max-width: 550px;
     max-height: 550px;
     margin-top: 20px;
-    background-color: var(--color-light);
+    background-color: var(--color-light-skin);
+    background-image: url('../Resources/Background-filler/cont-filler.png');
+    background-repeat: repeat;
+    contain: content;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
 }
 
 #index-landing {
     justify-content: space-evenly;
-    box-shadow: inset 0px 0px 25px 15px rgba(255, 0, 255, 0.5);
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: inherit;
+    background-repeat: repeat;
+    color: var(--color-dark-skin);
 }
 
 #index-landing h3 {
