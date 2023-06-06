@@ -1,0 +1,13 @@
+/* index.html */
+
+#index-landing {
+    justify-content: space-evenly;
+    background-color: inherit;
+    background-repeat: repeat;
+    color: var(--color-dark-skin);
+}
+
+#index-landing h3 {
+    text-align: center;
+}
+

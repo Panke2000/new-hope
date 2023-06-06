@@ -1,8 +1,21 @@
 
 
+
 /* SCREEN WIDTH */
-document.querySelector(':root').style.setProperty('--current-width', screen.width + 'px');
-console.log(screen.width + 'px');
+/* Initial */
+let screenWidth = window.innerWidth;
+document.querySelector(':root').style.setProperty('--current-width', screenWidth + 'px');
+console.log(screenWidth + 'px');
+/* Uzima sirinu stranice i menja vrednost promenjive u CSS-u  */
+window.onresize = (event) => {
+    let widthInPixels = event.currentTarget.innerWidth + 'px';
+    document.querySelector(':root').style.setProperty('--current-width', widthInPixels);
+    /*console.log(widthInPixels);*/
+    document.getElementById('current-width').innerHTML = widthInPixels;
+};
+
+
+
 
 
 /* HAMBURGER MENU */
