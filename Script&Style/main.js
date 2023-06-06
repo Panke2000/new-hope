@@ -21,6 +21,7 @@ button.addEventListener('click', (e) => {
 
         button.innerHTML = 'SAKRIJ';
         button.style.backgroundColor = 'var(--color-dark-skin)';
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler-dark.png')`;
         button.style.color = 'var(--color-light-skin)';
         header.style.minHeight = 'var(--header-height-hamburger)';
 
@@ -34,6 +35,7 @@ button.addEventListener('click', (e) => {
 
         button.innerHTML = 'MENI';
         button.style.backgroundColor = 'var(--color-light-skin)';
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler.png')`;
         button.style.color = 'var(--color-dark-skin)';
         header.style.minHeight = 'var(--header-height)';
     }
