@@ -1,14 +1,25 @@
 /* index.html */
 
 #index-landing {
+    display: inherit;
+    flex-direction: column;
     justify-content: space-evenly;
-    background-color: inherit;
-    background-repeat: repeat;
+    align-items: center;
+    width: 100%;
+    padding-top: calc(var(--header-height) + 30px);
+    padding-bottom: 30px;
+    background-color: var(--color-light);
     color: var(--color-dark-skin);
 }
 
 #index-landing h3 {
     text-align: center;
+}
+
+#index-landing-cont {
+    display: inherit;
+    flex-direction: inherit;
+    width: var(--width-mobile);
 }
 
 #index-cont-row-1 {

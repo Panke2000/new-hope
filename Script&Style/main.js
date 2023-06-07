@@ -19,9 +19,29 @@ window.onresize = (event) => {
 
 
 /* HAMBURGER MENU */
-let header = document.querySelector('header');
-let menu = document.getElementById('header-mobile-hamburger');
-let button = document.querySelector('#header-mobile-menu button');
+const header = document.querySelector('header');
+const menu = document.getElementById('header-mobile-hamburger');
+const button = document.querySelector('#header-mobile-menu button');
+const dimmer = document.getElementById('dimmer');
+
+function menuHover(){
+    if (button.innerHTML === 'MENI') {
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler-dark.png')`;
+        button.style.color = 'var(--color-light-skin)';
+    } else if (button.innerHTML === 'SAKRIJ') {
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler.png')`;
+        button.style.color = 'var(--color-dark-skin)';
+    }
+}
+function menuHoverOut() {
+    if (button.innerHTML === 'SAKRIJ') {
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler-dark.png')`;
+        button.style.color = 'var(--color-light-skin)';
+    } else if (button.innerHTML === 'MENI') {
+        button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler.png')`;
+        button.style.color = 'var(--color-dark-skin)';
+    }
+}
 
 button.addEventListener('click', (e) => {
     if (button.innerHTML === 'MENI') {
@@ -31,9 +51,10 @@ button.addEventListener('click', (e) => {
         });
 
         menu.classList.remove('hide');
+        dimmer.classList.remove('hide');
+
 
         button.innerHTML = 'SAKRIJ';
-        button.style.backgroundColor = 'var(--color-dark-skin)';
         button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler-dark.png')`;
         button.style.color = 'var(--color-light-skin)';
         header.style.minHeight = 'var(--header-height-hamburger)';
@@ -45,9 +66,9 @@ button.addEventListener('click', (e) => {
         });
 
         menu.classList.add('hide');
+        dimmer.classList.add('hide');
 
         button.innerHTML = 'MENI';
-        button.style.backgroundColor = 'var(--color-light-skin)';
         button.style.backgroundImage = `url('../Resources/Background-filler/header&footer-filler.png')`;
         button.style.color = 'var(--color-dark-skin)';
         header.style.minHeight = 'var(--header-height)';
